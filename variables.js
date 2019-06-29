@@ -17,6 +17,9 @@ In other words const arrays and const objects are still mutable
 
 Primitive values => i.e. numbers, strings, booleans, symbols, null or undefined are always immutable when declared as const.
  to make Object immutable we use Object.freez() property 
+1. We should use const the most, wherever possible if target identifier need not change
+2. If programs requires a frequent mutable identifier, we should opt for let over const
+3. We must use var rarely in programs
 
 */
 //decalring varible value=undefined
@@ -53,9 +56,12 @@ const newFunction = function () {
     console.log(letOne + S+ letTwo);
 
 //You can not change primitive value of const
+//This wont work it will give u an error  
+/*
 S = "Javascript"; 
-//This wont work it will not give u an error but will not work either   
+  
 console.log("I Love "+S);
+*/
  /*
 *** Example of Javascript Hoisting   ***  
 Variable Defined first and Declared Later
