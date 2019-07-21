@@ -3,8 +3,8 @@ Author=>Vivek Mishra
 syllogism =>
 1.
 All Men are Mortals
-Soretes is a men
-Socrate is mortal
+Socretes is a men
+Therefore, Socrates is mortal
 
 
 2.
@@ -33,9 +33,9 @@ const mandela = new MenConstructor('Mandela', 80);
 // let Men = [gandhi,socrates,washington,mandela];
 
 
-//Socrate is mortal
+//Therefore, Socrate is mortal
 if (socrates.mortal) {
-    console.log(socrates.name + ' is Mortel');
+    console.log(socrates.name + ' is Mortal');
 }
 console.log('**********************');
 console.log('Cake Problem');
@@ -57,7 +57,7 @@ function CakeConstructor(sweetness) {
 
 const cake1 = new CakeConstructor(9);
 
-//soretes is a men
+
 const cake2 = new CakeConstructor(6);
 
 // let cakes = [cake1,cake2];
