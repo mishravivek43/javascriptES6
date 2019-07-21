@@ -3,8 +3,8 @@ Author=>Vivek Mishra
 syllogism =>
 1.
 All Men are Mortals
-Soretes is a men
-Socrate is mortal
+Socretes is a men
+Therefore, Socrates is mortal
 
 
 2.
@@ -15,7 +15,9 @@ Therefore cake is vanilla
 */
 
 
-
+console.log('**********************');
+console.log('Socrates Problem');
+console.log('**********************');
 
 //Intiate Constructor For Men
 function MenConstructor(name, age) {
@@ -42,8 +44,10 @@ let Men = [gandhi, socrates, washington, mandela];
 
 //Defining the function
 let checkMortality = function (name) {
+    //checking the type of the input
     if (typeof name === 'string') {
         let nameExists = Men.filter((man) => man.name === name);
+        //if filer is successful
         if (nameExists.length >= 1) {
             if (nameExists[0].mortal) {
                 console.log(name + ' is mortal');
@@ -91,10 +95,11 @@ let cakes = [cake1,cake2];
 
 const getTypeOfCake= (cakeArr,isChocolate) => {
     //typeof array is equal to 'object' in js
+    //Checking type of input 
     if(Array.isArray(cakeArr)){
     //Ternary Function    
     let myCake = isChocolate ? cakeArr.filter((cake) =>cake.type === 'chocolate') : cakeArr.filter((cake) =>cake.type !== 'chocolate');
-
+    //if filter is successfull    
     if(myCake.length > 0){
         console.log(myCake);
         return 'Yeah, we got the  '+myCake[0].type +' flavour';
